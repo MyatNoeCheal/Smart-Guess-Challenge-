@@ -1,10 +1,2 @@
-# Ignore node_modules folder
 node_modules/
-
-# Ignore environment variable file with your API keys
 .env
-
-# Optional: ignore log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
