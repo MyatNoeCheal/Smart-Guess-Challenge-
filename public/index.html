@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Fact or Fake?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      text-align: center;
+      padding: 30px;
+    }
+    #fact-box {
+      background: white;
+      padding: 20px;
+      margin: 30px auto;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .real { background-color: #28a745; color: white; }
+    .fake { background-color: #dc3545; color: white; }
+    #explanation { margin-top: 20px; font-style: italic; }
+  </style>
+</head>
+<body>
+  <h1>🤔 AI Fact or Fake?</h1>
+  <p>Can you spot what's made up by AI?</p>
+
+  <div id="fact-box">
+    <p id="fact">Click below to generate a fact!</p>
+    <div>
+      <button class="real" onclick="guess('Real')">Real</button>
+      <button class="fake" onclick="guess('Fake')">Fake</button>
+    </div>
+    <p id="result"></p>
+    <p id="explanation"></p>
+  </div>
+
+  <button onclick="generateFact()">🔄 New Fact</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
