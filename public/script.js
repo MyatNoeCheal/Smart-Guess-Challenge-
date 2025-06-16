@@ -9,9 +9,7 @@ newFactBtn.addEventListener('click', async () => {
   try {
     const response = await fetch('/get-fake-fact', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      headers: { 'Content-Type': 'application/json' }
     });
 
     if (!response.ok) throw new Error('Error fetching fact.');
