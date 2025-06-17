@@ -1,0 +1,12 @@
+[
+  {
+    "fact": "Humans share 60% of their DNA with bananas.",
+    "answer": "Real",
+    "explanation": "This comparison highlights common biological building blocks shared across species."
+  },
+  {
+    "fact": "The sun is cold.",
+    "answer": "Fake",
+    "explanation": "The surface of the sun is over 5,000°C. Definitely not cold!"
+  }
+]
