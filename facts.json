@@ -8,5 +8,205 @@
     "fact": "The sun is cold.",
     "answer": "Fake",
     "explanation": "The surface of the sun is over 5,000°C. Definitely not cold!"
+  },
+  {
+    "fact": "Sharks are mammals.",
+    "answer": "Fake",
+    "explanation": "Sharks are fish, not mammals. They breathe through gills, not lungs."
+  },
+  {
+    "fact": "Water boils at a lower temperature on Mount Everest.",
+    "answer": "Real",
+    "explanation": "Due to lower atmospheric pressure at high altitudes, water boils at about 70°C on Everest."
+  },
+  {
+    "fact": "Lightning never strikes the same place twice.",
+    "answer": "Fake",
+    "explanation": "Lightning often strikes the same place multiple times, especially tall structures like skyscrapers."
+  },
+  {
+    "fact": "Octopuses have three hearts.",
+    "answer": "Real",
+    "explanation": "Two pump blood to the gills, while one pumps it to the rest of the body."
+  },
+  {
+    "fact": "Goldfish have a memory span of 3 seconds.",
+    "answer": "Fake",
+    "explanation": "Goldfish can remember things for weeks and can even be trained."
+  },
+  {
+    "fact": "The Eiffel Tower can grow taller in summer.",
+    "answer": "Real",
+    "explanation": "Metal expands when heated, making the tower grow up to 15 cm taller in hot weather."
+  },
+  {
+    "fact": "Bats are blind.",
+    "answer": "Fake",
+    "explanation": "Bats have good eyesight and use echolocation to navigate."
+  },
+  {
+    "fact": "Humans can't breathe and swallow at the same time.",
+    "answer": "Real",
+    "explanation": "The windpipe closes during swallowing to prevent choking, making it impossible to do both at once."
+  },
+  {
+    "fact": "Bananas grow on trees.",
+    "answer": "Fake",
+    "explanation": "Bananas grow on large herbaceous plants, not true trees."
+  },
+  {
+    "fact": "The Great Wall of China is visible from the Moon.",
+    "answer": "Fake",
+    "explanation": "It’s not visible from the Moon with the naked eye; this is a myth."
+  },
+  {
+    "fact": "Honey never spoils.",
+    "answer": "Real",
+    "explanation": "Honey’s low moisture and acidic pH allow it to last indefinitely if stored properly."
+  },
+  {
+    "fact": "Humans can breathe underwater with gills.",
+    "answer": "Fake",
+    "explanation": "Humans do not have gills and cannot extract oxygen from water."
+  },
+  {
+    "fact": "Saturn could float in water.",
+    "answer": "Real",
+    "explanation": "Saturn is less dense than water and would float in a sufficiently large body of water."
+  },
+  {
+    "fact": "An adult human has 206 bones.",
+    "answer": "Real",
+    "explanation": "Humans have 206 bones in adulthood after some bones fuse from birth."
+  },
+  {
+    "fact": "The moon produces its own light.",
+    "answer": "Fake",
+    "explanation": "The moon reflects sunlight; it does not generate its own light."
+  },
+  {
+    "fact": "Tomatoes are fruits.",
+    "answer": "Real",
+    "explanation": "Botanically, fruits contain seeds and grow from the flower of a plant, which tomatoes do."
+  },
+  {
+    "fact": "The human brain is the largest in the animal kingdom.",
+    "answer": "Fake",
+    "explanation": "Sperm whales have the largest brains; humans have large brains relative to body size."
+  },
+  {
+    "fact": "Sound travels faster in water than in air.",
+    "answer": "Real",
+    "explanation": "Sound waves move faster in water because the particles are closer together."
+  },
+  {
+    "fact": "Mount Everest is the closest point on Earth to the moon.",
+    "answer": "Fake",
+    "explanation": "Mount Chimborazo in Ecuador is closer to the moon due to Earth's equatorial bulge."
+  },
+  {
+    "fact": "Some metals can be liquid at room temperature.",
+    "answer": "Real",
+    "explanation": "Mercury is a metal that is liquid at room temperature."
+  },
+  {
+    "fact": "Venus is hotter than Mercury even though it is farther from the Sun.",
+    "answer": "Real",
+    "explanation": "Venus’s thick carbon dioxide atmosphere traps heat, causing a strong greenhouse effect."
+  },
+  {
+    "fact": "Humans have more than five senses.",
+    "answer": "Real",
+    "explanation": "Besides the basic five senses, humans have others like balance, temperature, and pain senses."
+  },
+  {
+    "fact": "Penguins can fly under water.",
+    "answer": "Fake",
+    "explanation": "Penguins swim using their wings but do not fly like birds in air."
+  },
+  {
+    "fact": "Your fingernails grow faster in cold weather.",
+    "answer": "Fake",
+    "explanation": "Nails grow faster in warm weather due to better circulation."
+  },
+  {
+    "fact": "The human body glows in the dark, but the light is too weak for our eyes to see.",
+    "answer": "Real",
+    "explanation": "Bioluminescence occurs naturally in humans but is extremely faint."
+  },
+  {
+    "fact": "A group of flamingos is called a 'flamboyance'.",
+    "answer": "Real",
+    "explanation": "A group of flamingos is indeed called a flamboyance."
+  },
+  {
+    "fact": "The Earth is closer to the sun in July than in January.",
+    "answer": "Fake",
+    "explanation": "Earth is closest to the sun in early January, not July."
+  },
+  {
+    "fact": "Humans can survive without a stomach.",
+    "answer": "Real",
+    "explanation": "People can live without a stomach with dietary adjustments and supplements."
+  },
+  {
+    "fact": "Diamonds are made from highly compressed coal.",
+    "answer": "Fake",
+    "explanation": "Diamonds form deep in the Earth’s mantle, not from coal."
+  },
+  {
+    "fact": "There is no gravity in space.",
+    "answer": "Fake",
+    "explanation": "Gravity exists everywhere; astronauts float because they are in free fall."
+  },
+  {
+    "fact": "AI can recognize faces better than most humans in controlled conditions.",
+    "answer": "Real",
+    "explanation": "Modern AI facial recognition algorithms are highly accurate under ideal conditions."
+  },
+  {
+    "fact": "AI can experience emotions like humans.",
+    "answer": "Fake",
+    "explanation": "AI can simulate emotions but does not actually feel them."
+  },
+  {
+    "fact": "The term 'Artificial Intelligence' was first used in the 1950s.",
+    "answer": "Real",
+    "explanation": "John McCarthy coined the term in 1956 at the Dartmouth Conference."
+  },
+  {
+    "fact": "AI and machine learning mean the same thing.",
+    "answer": "Fake",
+    "explanation": "Machine learning is a subset of AI focused on learning from data."
+  },
+  {
+    "fact": "ChatGPT is an example of a generative AI.",
+    "answer": "Real",
+    "explanation": "ChatGPT generates human-like text responses based on input."
+  },
+  {
+    "fact": "AI can learn without any data.",
+    "answer": "Fake",
+    "explanation": "AI needs data to learn patterns and improve."
+  },
+  {
+    "fact": "Self-driving cars use AI to make decisions on the road.",
+    "answer": "Real",
+    "explanation": "Autonomous vehicles rely on AI to analyze sensor data and navigate safely."
+  },
+  {
+    "fact": "AI is only used in technology companies.",
+    "answer": "Fake",
+    "explanation": "AI is used in healthcare, agriculture, finance, education, and many other industries."
+  },
+  {
+    "fact": "AI can generate fake images, voices, and videos.",
+    "answer": "Real",
+    "explanation": "Generative AI models can create realistic synthetic media, including deepfakes."
+  },
+  {
+    "fact": "Robots and AI are the same thing.",
+    "answer": "Fake",
+    "explanation": "Robots are physical machines; AI is software that can power robots or other systems."
   }
 ]
