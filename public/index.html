@@ -4,126 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AI Fact or Fake?</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f2f5;
-      text-align: center;
-      padding: 30px;
-    }
-
-    #fact-box {
-      background: white;
-      padding: 20px;
-      margin: 30px auto;
-      width: 80%;
-      max-width: 600px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    button {
-      padding: 10px 20px;
-      margin: 10px;
-      font-size: 16px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    button:disabled {
-      cursor: not-allowed;
-      opacity: 0.6;
-    }
-
-    .real {
-      background-color: #28a745;
-      color: white;
-    }
-
-    .fake {
-      background-color: #dc3545;
-      color: white;
-    }
-
-    #explanation {
-      margin-top: 20px;
-      font-style: italic;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🤔 AI Fact or Fake?</h1>
-  <p>Can you spot what's made up by AI?</p>
-
-  <div id="fact-box">
-    <p id="fact">Loading fact...</p>
-    <div>
-      <button class="real" onclick="guess('Real')" disabled>Real</button>
-      <button class="fake" onclick="guess('Fake')" disabled>Fake</button>
-    </div>
-    <p id="result"></p>
-    <p id="explanation"></p>
+  <div class="container">
+    <h1>🤖 AI Fact <span class="or">or</span> Fake?</h1>
+    <p class="subtitle">Test your ability to spot AI-generated misinformation</p>
+    <main>
+      <div class="fact-card">
+        <div class="fact-content">
+          <p id="fact">Loading fascinating fact...</p>
+        </div>
+        <div class="buttons">
+          <button class="btn real" onclick="guess('Real')">
+            <span class="icon">✓</span> Real
+          </button>
+          <button class="btn fake" onclick="guess('Fake')">
+            <span class="icon">✗</span> Fake
+          </button>
+        </div>
+        <div class="result-container">
+          <div id="result"></div>
+          <div id="explanation"></div>
+        </div>
+      </div>
+      <!-- Move the New Challenge button here, OUTSIDE the fact-card -->
+      <button class="new-fact-btn" id="new-fact-btn">
+        <span class="reload-icon">↻</span> New Challenge
+      </button>
+    </main>
+    <footer>
+      <p>Think critically. Verify always.</p>
+    </footer>
   </div>
-
-  <button onclick="generateFact()">🔄 New Fact</button>
-
-  <script>
-    let currentAnswer = "";
-    let currentExplanation = "";
-
-    const realBtn = document.querySelector('button.real');
-    const fakeBtn = document.querySelector('button.fake');
-
-    async function generateFact() {
-      realBtn.disabled = true;
-      fakeBtn.disabled = true;
-      document.getElementById('result').innerText = "";
-      document.getElementById('explanation').innerText = "";
-      document.getElementById('fact').innerText = "Loading fact...";
-
-      try {
-        const res = await fetch('/fact');
-        if (!res.ok) throw new Error("Network response was not ok");
-        const data = await res.json();
-
-        if (!data.fact || !data.answer || !data.explanation) {
-          throw new Error("Incomplete data received from server.");
-        }
-
-        document.getElementById('fact').innerText = data.fact;
-        currentAnswer = data.answer;
-        currentExplanation = data.explanation;
-
-        realBtn.disabled = false;
-        fakeBtn.disabled = false;
-      } catch (err) {
-        document.getElementById('fact').innerText = "⚠️ Error loading fact.";
-        console.error("Error fetching fact:", err);
-      }
-    }
-
-    function guess(userGuess) {
-      const result = document.getElementById('result');
-      const explanation = document.getElementById('explanation');
-
-      if (!currentAnswer) {
-        result.innerText = "Please wait for the fact to load!";
-        return;
-      }
-
-      if (userGuess === currentAnswer) {
-        result.innerText = "🎉 Congratulations! You got it right!";
-      } else {
-        result.innerText = "😢 Oops! That was wrong.";
-      }
-
-      explanation.innerText = `💡 ${currentExplanation}`;
-      realBtn.disabled = true;
-      fakeBtn.disabled = true;
-    }
-
-    window.onload = generateFact;
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

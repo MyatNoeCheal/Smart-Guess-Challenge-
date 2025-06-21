@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3003;
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -25,13 +25,11 @@ let facts = [];
   }
 })();
 
-app.get('/fact', (req, res) => {
+app.get('/facts', (req, res) => {
   if (!facts.length) {
     return res.status(500).json({ error: "No facts available." });
   }
-
-  const randomFact = facts[Math.floor(Math.random() * facts.length)];
-  res.json(randomFact);
+  res.json(facts);
 });
 
 app.listen(PORT, () => {

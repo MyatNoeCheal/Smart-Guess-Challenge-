@@ -1,0 +1,304 @@
+:root {
+  --primary: #6C5CE7;
+  --real: #00B894;
+  --fake: #FF7675;
+  --bg: #02515c;
+  --card-bg: #cdddde;
+  --text: #2D3436;
+  --text-light: #636E72;
+  --shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  --glow: 0 0 15px rgba(108, 92, 231, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+/* 2. Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 700px; /* Wider for laptops */
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin: 0 auto;
+}
+
+/* 3. Title */
+h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #6C5CE7 40%, #A29BFE 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0.2rem;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  animation: float 6s ease-in-out infinite;
+}
+
+.or {
+  font-weight: 400;
+  color: #a3a3a3;
+  font-size: 1.1em;
+}
+
+/* 4. Subtitle */
+.subtitle {
+  color: #7ed6df;
+  font-size: 1.08rem;
+  margin-bottom: 2.2rem;
+  text-align: center;
+}
+
+/* 5. Fact Card */
+.fact-card {
+  background: var(--card-bg);
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.8s ease-out forwards;
+  overflow: hidden;
+}
+
+.fact-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+.fact-card:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.fact-content {
+  text-align: left;
+  font-size: 1.18rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  width: 100%;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 6. Buttons */
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+.btn.real {
+  background: var(--real);
+  color: #fff;
+}
+
+.btn.fake {
+  background: var(--fake);
+  color: #fff;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.icon {
+  font-size: 1.3em;
+}
+
+/* 7. Explanation Box */
+.result-container {
+  min-height: 100px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 95%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#result {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+
+#explanation {
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* 8. New Challenge Button */
+.new-fact-btn {
+  margin-top: 1.2rem;
+  padding: 0.9rem 2.5rem;
+  background: linear-gradient(90deg, #6C5CE7 60%, #A29BFE 100%);
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  font-size: 1.13rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(108, 92, 231, 0.18);
+  transition: background 0.2s, transform 0.1s;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+
+.new-fact-btn:hover {
+  background: linear-gradient(90deg, #4834d4 60%, #6c5ce7 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.reload-icon {
+  font-size: 1.2em;
+  margin-right: 0.2em;
+}
+
+/* 9. Footer */
+footer {
+  margin-top: 2.2rem;
+  text-align: center;
+  color: #b2bec3;
+  font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px) rotateX(10deg); }
+  to { opacity: 1; transform: translateY(0) rotateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* 10. Responsive */
+@media (max-width: 900px) {
+  .container {
+    max-width: 98vw;
+    padding: 1.5rem 0.5rem;
+  }
+  .fact-card {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.3rem;
+    animation: none;
+  }
+  .btn, .new-fact-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7rem 0;
+  }
+}
+
+/* Special Effects */
+.correct-answer {
+  animation: correctGlow 0.5s ease-out;
+}
+
+@keyframes correctGlow {
+  0% { box-shadow: 0 0 0 rgba(0, 184, 148, 0); }
+  50% { box-shadow: 0 0 30px rgba(0, 184, 148, 0.7); }
+  100% { box-shadow: 0 0 0 rgba(0, 184, 148, 0); }
+}
+
+.wrong-answer {
+  animation: wrongShake 0.5s ease-out;
+}
+
+@keyframes wrongShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#fact {
+  color: #0f153a; /* Change this to any color you like */
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+}
